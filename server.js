@@ -1,6 +1,5 @@
 
 import { Client, Events, GatewayIntentBits } from "discord.js";
-import { config } from "dotenv";
 import fetch from "node-fetch";
 
 if(process.env.NODE_ENV === "dev") {
