@@ -2,10 +2,11 @@
   "name": "liveupdatebot",
   "version": "1.0.0",
   "description": "Discord bot to post stream updates",
-  "main": "server.mjs",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node ./server.mjs",
-    "dev": "set NODE_ENV=dev&& nodemon server.mjs"
+    "start": "node ./server.js",
+    "dev": "set NODE_ENV=dev&& nodemon server.js"
   },
   "author": "Rubafix",
   "license": "ISC",
