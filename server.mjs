@@ -1,6 +1,13 @@
-import 'dotenv/config';
+
 import { Client, Events, GatewayIntentBits } from "discord.js";
+import { config } from "dotenv";
 import fetch from "node-fetch";
+
+if(process.env.NODE_ENV === "dev") {
+  console.log('Dev environnement detected');
+  await import('dotenv');
+  config();
+}
 
 const ytChannel = process.env.YT_CHANNEL;
 const ddChanName = process.env.DD_CHANNEL;
@@ -59,6 +66,5 @@ async function PublishUpdate() {
     console.log(e);
   }
 }
-
 // Log in to Discord with your client's token
 client.login(process.env.TOKEN);
